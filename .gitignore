@@ -21,7 +21,7 @@ out/
 .gradle/
 build/
 
-##
+#set GPG
 
 # Local configuration file (sdk path, etc)
 local.properties
