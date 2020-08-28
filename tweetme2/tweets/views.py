@@ -6,7 +6,7 @@ from .models import Tweet
 # Create your views here.
 def home_view(request, *args, **kwargs):
     # return HttpResponse("<h1>Hello World</h1>")
-    return render(request, 'pages/home.html', context={}, status=200)
+    return render(request, "pages/home.html", context={}, status=200)
 
 def tweet_detail_view(request, tweet_id, *args, **kwargs):
     """
@@ -14,7 +14,7 @@ def tweet_detail_view(request, tweet_id, *args, **kwargs):
     Consume by JavaScript or Swift/Java/iOS/Andriod
     return json data
     """
-    
+
     data = {
         "id": tweet_id,
     }
@@ -25,4 +25,4 @@ def tweet_detail_view(request, tweet_id, *args, **kwargs):
     except:
         data['message'] = "Not found"
         status = 404
-    return JsonResponse(data, status=status) #json.dumps content_type='application/json
+    return JsonResponse(data, status=status) #json.dumps content_type='application/json 
